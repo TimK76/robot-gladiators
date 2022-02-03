@@ -47,31 +47,16 @@ if (promptFight === "skip" || promptFight === "SKIP") {
 
   // if yes (true), leave fight
   if (confirmSkip) {
-<<<<<<< Updated upstream
-    window.alert(playerName + " has decided to skip this fight. Goodbye!");
-    // subtract money from playerMoney for skipping
-    playerMoney = Math.max(0, playerMoney - 10);
-    console.log("playerMoney", playerMoney);
-=======
     window.alert(playerInfo.name + " has decided to skip this fight. Goodbye!");
     // subtract money from playerInfo.money for skipping
     playerInfo.money = playerInfo.money - 10;
     console.log("playerInfo.money", playerInfo.money);
->>>>>>> Stashed changes
     break;
   }
   }
 
-<<<<<<< Updated upstream
-// generate random damage value based on player's attack power
-var damage = randomNumber(playerAttack - 3, playerAttack);
-
-enemyHealth = Math.max(0, enemyHealth - damage);
-
-=======
 // remove enemy's health by subtracting the amount set in the playerInfo.attack variable
     enemyHealth = enemyHealth - playerInfo.attack;
->>>>>>> Stashed changes
     console.log(
       playerInfo.name + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining."
     );
@@ -89,14 +74,8 @@ enemyHealth = Math.max(0, enemyHealth - damage);
       window.alert(enemyName + " still has " + enemyHealth + " health left.");
     }
   
-<<<<<<< Updated upstream
-    // generate random damage value based on enemy's attack power
-    var damage = randomNumber(enemyAttack - 3, enemyAttack);
-    playerHealth = Math.max(0, playerHealth - damage);
-=======
     // // remove player's health by subtracting the amount set in the enemyAttack variable
     playerInfo.health = playerInfo.health - enemyAttack;
->>>>>>> Stashed changes
     console.log(
       enemyName + " attacked " + playerInfo.name + ". " + playerInfo.name + " now has " + playerInfo.health + " health remaining."
     );
